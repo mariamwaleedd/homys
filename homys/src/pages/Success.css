@@ -1,0 +1,29 @@
+.success-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.check-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #112a3d;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 30px;
+}
+
+.check-icon svg { width: 40px; height: 40px; }
+.success-content h1 { font-size: 3rem; margin-bottom: 20px; color: #112a3d; }
+.success-content p { opacity: 0.7; max-width: 450px; line-height: 1.6; margin-bottom: 40px; }
+.success-actions { display: flex; gap: 20px; justify-content: center; }
+
+@media (max-width: 600px) {
+  .success-actions { flex-direction: column; }
+}

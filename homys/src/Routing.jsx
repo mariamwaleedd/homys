@@ -9,11 +9,12 @@ import Whatsapp from './common/Whatsapp';
 import Error from './pages/Error';
 import PropertyDetails from './pages/PropertyDetails';
 import AboutUs from './components/AboutUs';
-import Login from './pages/Login';
-import SignUp from './pages/SignUp';
-import ForgetPassword from './pages/ForgetPassword';
-import ContactUs from './pages/ContactUs';
 import Profile from './pages/Profile';
+import ContactUs from './pages/ContactUs';
+import Checkout from './pages/Checkout';
+import Payment from './pages/Payment';
+import Success from './pages/Success';
+import Cart from './pages/Cart';
 
 const Routing = () => {
   return (
@@ -23,15 +24,15 @@ const Routing = () => {
       
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Stays" element={<Stays />} />
-        <Route path="/PropertyDetails" element={<PropertyDetails />} />
-        <Route path="/AboutUs" element={<AboutUs />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/stays" element={<Stays />} />
+        <Route path="/propertydetails" element={<PropertyDetails />} />
+        <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/forget-password" element={<ForgetPassword />} />
-
+        <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/success" element={<Success />} />
         <Route path="*" element={<Error />} /> 
       </Routes>
 
