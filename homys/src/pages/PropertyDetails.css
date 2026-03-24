@@ -48,7 +48,7 @@
 }
 
 .pd-nav-btn svg { width: 24px; height: 24px; color: #112a3d; }
-.pd-nav-btn:hover { background: #112a3d; color: #fff; }
+.pd-nav-btn:hover { background: #112a3d; }
 .pd-nav-btn:hover svg { color: #fff; }
 .pd-nav-btn.prev { left: 40px; }
 .pd-nav-btn.next { right: 40px; }
@@ -57,7 +57,7 @@
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.2fr 420px;
+  grid-template-columns: 1fr 420px;
   gap: 80px;
   padding: 100px 20px;
 }
@@ -97,60 +97,67 @@
 
 .pd-spec-box:last-child { border: none; }
 
+.pd-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
 .pd-section-title {
   font-family: 'Libre Baskerville', serif;
   font-size: 2rem;
   margin-bottom: 25px;
 }
 
-.pd-description p {
+.pd-text {
   font-family: 'Roboto', sans-serif;
-  line-height: 2;
+  line-height: 1.8;
   font-weight: 300;
-  font-size: 1.1rem;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: #444;
 }
 
-.pd-detailed-features {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  margin-bottom: 60px;
+.pd-room-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-top: 1px solid rgba(17, 42, 61, 0.1);
+  padding-top: 20px;
 }
 
-.feature-col h3 {
+.pd-room-detail-item {
+  display: flex;
+  justify-content: space-between;
   font-family: 'Encode Sans Expanded', sans-serif;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  letter-spacing: 2px;
-  color: #112a3d;
+  font-size: 0.9rem;
 }
 
-.feature-col ul {
+.pd-room-detail-item .label { font-weight: 600; opacity: 0.6; }
+
+.pd-features-list {
   list-style: none;
   padding: 0;
 }
 
-.feature-col ul li {
+.pd-features-list li {
   font-family: 'Roboto', sans-serif;
-  font-size: 0.95rem;
-  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
   padding-left: 25px;
   position: relative;
-  opacity: 0.8;
+  font-weight: 300;
 }
 
-.feature-col ul li::before {
+.pd-features-list li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 10px;
   width: 6px;
   height: 6px;
-  background-color: #112a3d;
+  background: #112a3d;
   border-radius: 50%;
 }
 
@@ -158,7 +165,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  margin-top: 120px;
+  margin-top: 60px;
   align-items: center;
 }
 
@@ -211,8 +218,9 @@
   font-family: 'Encode Sans Expanded', sans-serif;
   font-size: 0.85rem;
   font-weight: 500;
-  color: #112a3d;
 }
+
+.amenity-item svg { color: #112a3d; opacity: 0.8; }
 
 .pd-booking-card {
   position: sticky;
@@ -224,12 +232,13 @@
   box-shadow: 0 30px 60px rgba(17, 42, 61, 0.08);
 }
 
-.pd-booking-title { font-size: 1.4rem; margin-bottom: 30px; }
+.pd-booking-title { font-size: 1.4rem; margin-bottom: 30px; font-family: 'Encode Sans Expanded', sans-serif; }
 
 .pd-price-val { font-size: 3rem; font-weight: 700; }
 
 .pd-price-unit { opacity: 0.5; font-size: 1rem; margin-left: 5px; }
 
+.pd-input-group { margin-bottom: 20px; }
 .pd-input-group label {
   font-family: 'Encode Sans Expanded', sans-serif;
   font-weight: 600;
@@ -247,7 +256,6 @@
   background: transparent;
   font-family: 'Roboto', sans-serif;
   color: #112a3d;
-  margin-bottom: 20px;
 }
 
 .pd-primary-btn {
@@ -261,30 +269,16 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
-  margin-top: 20px;
   transition: 0.3s;
 }
 
 .pd-primary-btn:hover { background: #1a3d58; }
+.pd-guarantee { text-align: center; margin-top: 15px; font-size: 0.8rem; opacity: 0.6; }
 
 .pd-gallery { padding: 120px 20px; text-align: center; }
-
 .pd-gallery-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; margin-bottom: 60px; }
-
-.pd-gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 15px;
-}
-
-.pd-gallery-grid img { 
-    width: 100%; 
-    aspect-ratio: 1; 
-    object-fit: cover; 
-    border: 1px solid rgba(17, 42, 61, 0.2); 
-    transition: all 0.4s ease;
-}
-
+.pd-gallery-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 15px; }
+.pd-gallery-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; border: 1px solid rgba(17, 42, 61, 0.2); transition: all 0.4s ease; }
 .pd-gallery-grid img:hover { transform: scale(1.03); filter: brightness(1.1); }
 
 @media (max-width: 1200px) {
@@ -295,6 +289,7 @@
 
 @media (max-width: 900px) {
   .pd-title { font-size: 2.8rem; }
+  .pd-info-grid { grid-template-columns: 1fr; }
   .pd-amenities-grid { grid-template-columns: repeat(2, 1fr); }
   .pd-gallery-grid { grid-template-columns: repeat(3, 1fr); }
 }
@@ -304,7 +299,7 @@
   .pd-nav-btn { width: 45px; height: 45px; }
   .pd-nav-btn.prev { left: 15px; }
   .pd-nav-btn.next { right: 15px; }
-  .pd-detailed-features, .pd-about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .pd-about-grid { grid-template-columns: 1fr; gap: 40px; }
   .pd-spec-box { border: none; padding-right: 0; }
   .pd-gallery-grid { grid-template-columns: repeat(2, 1fr); }
 }

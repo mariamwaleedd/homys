@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './Homes.css';
 
 import frame125 from '../imgs/Frame 125.png';
@@ -11,6 +12,7 @@ import rect11 from '../imgs/Rectangle 11.png';
 
 const HomeCard = ({ home }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate(); 
 
   const nextSlide = (e) => {
     e.stopPropagation();
@@ -51,7 +53,10 @@ const HomeCard = ({ home }) => {
           ))}
         </div>
 
-        <button className="check-house-btn">Check Out House</button>
+        {/* Updated "Check Out House" to go to Property Details */}
+        <button className="check-house-btn" onClick={() => navigate('/propertydetails')}>
+          Check Out House
+        </button>
       </div>
 
       <div className="home-card-content">
@@ -87,6 +92,8 @@ const HomeCard = ({ home }) => {
 };
 
 const Homes = () => {
+  const navigate = useNavigate(); // Initialize navigate here
+
   const propertyData = [
     { id: 1, images: [frame125, rect6, rect9, rect10], title: 'Modern Downtown Apartment', location: 'Downtown, New York', beds: 2, baths: 2, sqft: '1200 sqft', price: '$2,500/month' },
     { id: 2, images: [frame130, rect11, rect6, rect9], title: 'Modern Downtown Apartment', location: 'Downtown, New York', beds: 2, baths: 2, sqft: '1200 sqft', price: '$3,500/month' },
@@ -107,7 +114,10 @@ const Homes = () => {
           <HomeCard key={home.id} home={home} />
         ))}
       </div>
-      <button className="explore-more-homes">Explore More</button>
+      
+      <button className="explore-more-homes" onClick={() => navigate('/stays')}>
+        Explore More
+      </button>
     </section>
   );
 };
