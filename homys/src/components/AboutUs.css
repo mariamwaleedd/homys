@@ -93,7 +93,8 @@
 
 .why-card {
   padding: 50px 30px;
-  background: white;
+  background: #112a3d;
+  color: rgb(255, 255, 255);
   border: 1px solid rgba(17, 42, 61, 0.1);
   border-radius: 20px;
   text-align: center;

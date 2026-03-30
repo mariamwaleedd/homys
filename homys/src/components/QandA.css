@@ -8,19 +8,15 @@
 
 .q-and-a-container {
   width: 100%;
-  max-width: 1200px;
-  border: 1.5px solid #112a3d;
+  max-width: 1350px;
   display: flex;
   cursor: pointer;
   overflow: hidden;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  /* Matching the Homys diagonal rounding style */
-  border-radius: 0 80px 0 80px; 
 }
 
 .q-and-a-container:hover {
   transform: translateY(-10px);
-  box-shadow: 0 30px 60px rgba(17, 42, 61, 0.12);
 }
 
 .q-content-side {

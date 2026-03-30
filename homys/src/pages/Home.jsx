@@ -14,8 +14,8 @@ const Home = () => {
     <>
       <Hero />
       <HeroBody />
-      <QandA/>
       <SeaSection />
+      <QandA/>
       <NextStay />
       <AboutHero />
       <Separator />
