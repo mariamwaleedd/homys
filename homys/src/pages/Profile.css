@@ -7,7 +7,8 @@
 .profile-hero {
   padding: 160px 40px 60px;
   text-align: center;
-  background-color: #f1ede3;
+    color: #fff3e0;
+  background-color: #112a3d;
 }
 
 .profile-hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
@@ -103,7 +104,7 @@
 }
 
 .booking-img { width: 200px; height: 205px; }
-.booking-img img { width: 100%; height: 100%; object-fit: cover; }
+.booking-img img { width: 100%; height: 120%; object-fit: cover; }
 
 .booking-details { padding: 25px; flex: 1; display: flex; flex-direction: column; justify-content: center; }
 .booking-details h4 { font-size: 1.4rem; margin-bottom: 5px; }

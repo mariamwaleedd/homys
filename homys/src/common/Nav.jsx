@@ -41,7 +41,7 @@ const Nav = () => {
 
             <div className="nav-right">
                 <div className={`nav-actions ${isScrolled ? 'hide' : ''}`}>
-                    <Link to="/stays">
+                    <Link to="/booknow">
                         <button className="book-btn">Book Now</button>
                     </Link>
                     
@@ -74,7 +74,7 @@ const Nav = () => {
                             <Link to="/contactus" onClick={closeMenu}>Contact</Link>
                         </div>
                         <div className="dropdown-actions">
-                            <Link to="/stays" onClick={closeMenu}>
+                            <Link to="/booknow" onClick={closeMenu}>
                                 <button className="book-btn">Book Now</button>
                             </Link>
                             

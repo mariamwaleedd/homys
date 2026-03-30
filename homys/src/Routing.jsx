@@ -20,6 +20,7 @@ import AllStays from './pages/AllStays';
 import ListProperty from './pages/ListProperty';
 import Questionnaire from './pages/Questionnaire';
 import ChatBot from './common/ChatBot';
+import BookNow from './pages/BookNow';
 
 const Routing = () => {
   return (
@@ -42,6 +43,7 @@ const Routing = () => {
         <Route path="/all-stays" element={<AllStays />} />
         <Route path="/list-property" element={<ListProperty />} />
         <Route path="/questionnaire" element={<Questionnaire />} />
+        <Route path="/booknow" element={<BookNow />} />
         <Route path="*" element={<Error />} /> 
       </Routes>
       <Footer />

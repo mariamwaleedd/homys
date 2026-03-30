@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 import logo from '../imgs/logowhite.png';
-import footer from '../imgs/footer.png';
+import footerBg from '../imgs/footer.png';
 
 const Footer = () => {
   return (
@@ -10,41 +11,45 @@ const Footer = () => {
         
         <div className="footer-top">
           <div className="footer-logo-section">
-            <img src={logo} alt="HOMYS Logo" className="footer-logo" />
+            <Link to="/">
+              <img src={logo} alt="HOMYS Logo" className="footer-logo" />
+            </Link>
           </div>
 
           <div className="footer-links-grid">
             <div className="footer-column">
-              <h3>Catalog</h3>
+              <h3>Quick Links</h3>
               <ul>
-                <li><a href="/">ESWT</a></li>
-                <li><a href="/">HILT</a></li>
-                <li><a href="/">Skin IQ</a></li>
-                <li><a href="/">Rehab Simulators</a></li>
-                <li><a href="/">EECP</a></li>
+                <li><Link to="/aboutus">About Us</Link></li>
+                <li><Link to="/contactus">Contact Us</Link></li>
+                <li><Link to="/stays">Stays</Link></li>
+                <li><Link to="/faq-page">FAQS</Link></li>
               </ul>
             </div>
 
             <div className="footer-column">
               <h3>Services</h3>
               <ul>
-                <li><a href="/">Leasing</a></li>
-                <li><a href="/">Consultation</a></li>
+                <li><Link to="/stays">Book a Stay</Link></li>
+                <li><Link to="/list-property">List Property</Link></li>
+                <li><Link to="/questionnaire">Personalized Quiz</Link></li>
               </ul>
             </div>
 
             <div className="footer-column">
-              <h3>About</h3>
+              <h3>Follow Us</h3>
               <ul>
-                <li><a href="/">About Us</a></li>
-                <li><a href="/">News</a></li>
-                <li><a href="/">Partners</a></li>
+                <li><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a></li>
+                <li><a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a></li>
+                <li><a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></li>
               </ul>
             </div>
           </div>
 
           <div className="footer-cta">
-            <button className="get-touch-btn">Get In Touch</button>
+            <Link to="/contactus">
+              <button className="get-touch-btn">Get In Touch</button>
+            </Link>
           </div>
         </div>
 
@@ -59,8 +64,8 @@ const Footer = () => {
           </div>
 
           <div className="footer-contact">
-            <p>+7 (411) 390-51-11</p>
-            <p>Homys@managment.com</p>
+            <Link to="/contactus" className="contact-link"><p>+20 127 584 3440</p></Link>
+            <Link to="/contactus" className="contact-link"><p>Homys@management.com</p></Link>
           </div>
 
           <div className="footer-copyright">
@@ -71,7 +76,7 @@ const Footer = () => {
 
       <div 
         className="footer-texture" 
-        style={{ backgroundImage: `url(${footer})` }}
+        style={{ backgroundImage: `url(${footerBg})` }}
       ></div>
     </footer>
   );

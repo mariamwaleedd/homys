@@ -26,7 +26,7 @@
 
 .main-contact-form { display: flex; flex-direction: column; gap: 25px; }
 
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 55px; }
 
 .form-group label {
   display: block;

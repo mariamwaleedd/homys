@@ -48,7 +48,7 @@ const AboutUs = () => {
 
       <section className="about-mission-banner">
         <div className="mission-content">
-          <h2 className="libre">Homys was born from a desire to redefine the concept of home.</h2>
+          <h2 className="libre">Homys was born from a <i>desire</i> to redefine the concept of home.</h2>
         </div>
       </section>
 

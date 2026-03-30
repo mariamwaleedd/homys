@@ -26,7 +26,7 @@
 }
 
 .home-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.696);
   border: 1.5px solid #112a3d;
   border-radius: 0;
   overflow: hidden;
@@ -159,7 +159,7 @@
 }
 
 .home-card-content {
-  padding: 30px;
+  padding: 45px;
   font-family: 'Encode Sans Expanded', sans-serif;
   color: #112a3d;
 }

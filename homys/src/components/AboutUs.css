@@ -40,6 +40,10 @@
   text-align: center;
 }
 
+.about-mission-banner h2 {
+  font-size: 2rem;
+}
+
 .about-split {
   display: grid;
   grid-template-columns: 1fr 1fr;

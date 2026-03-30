@@ -116,7 +116,11 @@
 .footer-contact p {
   margin: 5px 0;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-link {
+  text-decoration: none !important;
 }
 
 .footer-copyright {
