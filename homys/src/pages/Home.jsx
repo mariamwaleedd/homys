@@ -8,6 +8,7 @@ import Separator from '../common/Separator';
 import FaqHero from '../components/FaqHero';
 import SeaSection from '../components/SeaSection';
 import QandA from '../components/QandA';
+import AddPropertyComp from '../components/AddPropertyComp';
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <QandA/>
       <NextStay />
       <AboutHero />
+      <AddPropertyComp/>
       <Separator />
       <FaqHero />
     </>

@@ -26,6 +26,7 @@ import Preloader from './common/Preloader';
 import Login from './pages/Login';
 import Signup from './pages/SignUp';
 import ForgetPassword from './pages/ForgetPassword';
+import Furnish from './pages/Furnish';
 
 const Routing = () => {
   return (
@@ -54,6 +55,7 @@ const Routing = () => {
         <Route path="/questionnaire" element={<Questionnaire />} />
         <Route path="/booknow" element={<BookNow />} />
         <Route path="/morehomes" element={<MoreHomes />} />
+        <Route path="/furnish" element={<Furnish />} />
         <Route path="*" element={<Error />} /> 
       </Routes>
       <Footer />

@@ -6,6 +6,7 @@ const ListProperty = () => {
   const navigate = useNavigate();
   const [selectedImages, setSelectedImages] = useState([]);
   const [nearby, setNearby] = useState([]);
+  const [furnished, setFurnished] = useState('');
 
   const handleImageChange = (e) => {
     if (e.target.files) {
@@ -47,8 +48,8 @@ const ListProperty = () => {
             <h2 className="libre">Property Details</h2>
             <div className="lp-grid">
               <div className="lp-group">
-                <label className="encode">Property Name</label>
-                <input type="text" placeholder="e.g., Azure Seafront Villa" className="encode" />
+                <label className="encode">Project Name</label>
+                <input type="text" placeholder="e.g., Mivida" className="encode" />
               </div>
               <div className="lp-group">
                 <label className="encode">Property Type</label>
@@ -74,6 +75,25 @@ const ListProperty = () => {
               <div className="lp-group">
                 <label className="encode">Expected Price per Night ($)</label>
                 <input type="text" placeholder="e.g., 250" className="encode" />
+              </div>
+              <div className="lp-group">
+                <label className="encode">Furnished or not?</label>
+                <div className="lp-pill-container">
+                  <button 
+                    type="button" 
+                    className={`lp-pill encode ${furnished === 'yes' ? 'active' : ''}`}
+                    onClick={() => setFurnished('yes')}
+                  >
+                    Yes
+                  </button>
+                  <button 
+                    type="button" 
+                    className={`lp-pill encode ${furnished === 'no' ? 'active' : ''}`}
+                    onClick={() => setFurnished('no')}
+                  >
+                    No
+                  </button>
+                </div>
               </div>
             </div>
             <div className="lp-group full" style={{marginTop: '40px'}}>

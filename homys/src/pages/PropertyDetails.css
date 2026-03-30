@@ -274,31 +274,135 @@
 .pd-primary-btn:hover { background: #1a3d58; }
 .pd-guarantee { text-align: center; margin-top: 15px; font-size: 0.8rem; opacity: 0.6; }
 
-.pd-gallery { padding: 120px 20px; text-align: center; }
-.pd-gallery-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; margin-bottom: 60px; }
-.pd-gallery-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 15px; }
-.pd-gallery-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; border: 1px solid rgba(17, 42, 61, 0.2); transition: all 0.4s ease; }
-.pd-gallery-grid img:hover { transform: scale(1.03); filter: brightness(1.1); }
 
-@media (max-width: 1200px) {
-  .pd-main-container { grid-template-columns: 1fr; gap: 60px; }
-  .pd-booking-sidebar { order: -1; }
-  .pd-booking-card { position: static; width: 100%; max-width: 550px; margin: 0 auto; }
+.pd-gallery {
+  padding: 100px 40px;
+  text-align: center;
 }
 
-@media (max-width: 900px) {
-  .pd-title { font-size: 2.8rem; }
-  .pd-info-grid { grid-template-columns: 1fr; }
-  .pd-amenities-grid { grid-template-columns: repeat(2, 1fr); }
-  .pd-gallery-grid { grid-template-columns: repeat(3, 1fr); }
+.pd-gallery-header { margin-bottom: 50px; }
+.pd-gallery-header p { opacity: 0.6; margin-top: 10px; }
+
+.pd-gallery-grid-large {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Larger images - 3 columns */
+  gap: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1.5px solid #112a3d;
+  cursor: pointer;
+  background-color: #bccdda;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.gallery-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 42, 61, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.gallery-item:hover img { transform: scale(1.1); }
+.gallery-item:hover .gallery-hover-overlay { opacity: 1; }
+
+/* LIGHTBOX MODAL STYLES */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+.lb-content {
+  width: 90%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lb-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  box-shadow: 0 0 50px rgba(0,0,0,0.5);
+  animation: zoomIn 0.3s ease-out;
+}
+
+@keyframes zoomIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+.lb-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 5100;
+}
+
+.lb-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  z-index: 5100;
+}
+
+.lb-nav:hover { background: white; color: black; }
+.lb-prev { left: 40px; }
+.lb-next { right: 40px; }
+
+.lb-counter {
+  position: absolute;
+  bottom: 40px;
+  color: white;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .pd-gallery-grid-large { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
-  .pd-hero { height: 50vh; }
-  .pd-nav-btn { width: 45px; height: 45px; }
-  .pd-nav-btn.prev { left: 15px; }
-  .pd-nav-btn.next { right: 15px; }
-  .pd-about-grid { grid-template-columns: 1fr; gap: 40px; }
-  .pd-spec-box { border: none; padding-right: 0; }
-  .pd-gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .pd-gallery-grid-large { grid-template-columns: 1fr; }
+  .lb-nav { width: 45px; height: 45px; font-size: 1.5rem; }
+  .lb-prev { left: 10px; }
+  .lb-next { right: 10px; }
+  .lb-close { top: 20px; right: 20px; }
 }
